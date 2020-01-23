@@ -1,12 +1,7 @@
 [
   {
-    "title": "Shopping",
-    "text": "Meat\nMilk\nFruit",
-    "routeName": "shopping"
-  },
-  {
     "title": "Takeaway",
-    "text": "Pasta\nPizza",
+    "text": "Pasta\nPizza\nGarlic bread",
     "routeName": "takeaway"
   }
 ]

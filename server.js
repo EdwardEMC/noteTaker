@@ -40,7 +40,7 @@ app.post("/api/notes", function(req, res) {
 
     console.log(JSON.stringify(newNote, null, 2));
 
-    fs.readFile("db.json", "utf8", function(err, data) { //reading db.json to see what is already saved
+    fs.readFile("db.json", "utf8", function(err, data) {//reading db.json to see what is already saved
         if(err) {
             throw err;
         }
@@ -82,8 +82,29 @@ app.get("/api/notes/:id", function(req, res) {
 });
 
 app.delete("/api/notes/:id", function(req, res) {
-    savedspace.splice(req.params.id, 1); //change savedspace to db.json file
-    res.json(savedspace);
+    console.log(req.params.id);
+    fs.readFile("db.json", "utf8", function(err, data) { //reading db.json to see what is already saved
+        if(err) {
+            throw err;
+        }
+        else {
+            obj = JSON.parse(data);
+            for (var x = 0; x < obj.length; x++) {
+                if (req.params.id === obj[x].routeName) {
+                    obj.splice(x, 1);
+                }
+            }
+            edit = JSON.stringify(obj, null, 2);
+        }
+
+        fs.writeFile("db.json", edit, function(err) {//appending data to db.json
+            if(err) {
+                throw err;
+            }
+            console.log("Saved");
+        });
+        res.json(JSON.parse(edit));
+    });
 });
 
 app.listen(PORT, function() {
