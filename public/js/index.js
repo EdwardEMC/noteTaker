@@ -3,6 +3,7 @@ var $noteText = $(".note-textarea");
 var $saveNoteBtn = $(".save-note");
 var $newNoteBtn = $(".new-note");
 var $noteList = $(".list-container .list-group");
+// var fs = require("fs"); -- causes notes saving/render to not work
 
 // activeNote is used to keep track of the note in the textarea
 var activeNote = {};
@@ -53,7 +54,7 @@ var renderActiveNote = function() {
 var handleNoteSave = function() {
   var newNote = {
     title: $noteTitle.val(),
-    text: $noteText.val()
+    text: $noteText.val(),
   };
 
   saveNote(newNote).then(function(data) {
