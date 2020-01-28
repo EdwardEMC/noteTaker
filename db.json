@@ -1,12 +1,7 @@
 [
   {
-    "title": "Shopping",
-    "text": "Milk",
-    "routeName": 0
-  },
-  {
-    "title": "Shopping",
-    "text": "Fish",
+    "title": "Bar",
+    "text": "Whiskey\nVodka\nWine",
     "routeName": 1
   }
 ]

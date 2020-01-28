@@ -64,7 +64,7 @@ app.post("/api/notes", function(req, res) {
                     newNote.routeName = obj[length].routeName+1; //using numbers instead of title, if multiple of the same title exist not everyone is deleted
                 }
                 else {
-                    newNote.routeName = 0;
+                    newNote.routeName = 1; //starting at 1 as starting at 0 causes false in some if statements for note rendering
                 }
                 console.log(JSON.stringify(newNote, null, 2));
                 obj.push(newNote);
