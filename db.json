@@ -1,7 +1,22 @@
 [
   {
-    "title": "Bar",
-    "text": "Whiskey\nVodka\nWine",
+    "title": "Shopping",
+    "text": "Dinner:\nMeat\nAvocado\nButter\nChilli\n\nDessert:\nMilk\nChocolate buttons\n\nBreakfast:\nEggs\nBacon\nBread",
     "routeName": 1
+  },
+  {
+    "title": "To do list",
+    "text": "Clean room",
+    "routeName": 2
+  },
+  {
+    "title": "Must remember",
+    "text": "June 22nd",
+    "routeName": 3
+  },
+  {
+    "title": "Song lyrics to find",
+    "text": "Something about a dove",
+    "routeName": 4
   }
 ]
